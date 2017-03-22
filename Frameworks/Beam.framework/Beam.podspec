@@ -37,6 +37,5 @@ mimik Beam allows developers to beam content among various heterogeneous devices
   s.dependency 'GCDWebServer', '~> 3.0'
   s.dependency 'CocoaLumberjack/Swift', '~> 3.0'
   s.dependency 'CryptoSwift', '~> 0.6'
-  s.dependency 'RealmSwift', '~> 2.1'
 
 end
