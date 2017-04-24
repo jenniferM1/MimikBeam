@@ -14,7 +14,12 @@ Beam is available through [mimik Pods](https://github.com/mimikpods). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Beam'
+source 'https://github.com/CocoaPods/Specs'
+source 'https://github.com/mimikpods/Specs'
+```
+
+```ruby
+pod 'MimikBeam'
 ```
 
 ## Author
