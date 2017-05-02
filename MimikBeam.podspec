@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MimikBeam'
-  s.version          = '1.1.4'
+  s.version          = '1.1.6'
   s.summary          = 'mimik Beam library'
 
 # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ mimik Beam allows developers to beam content among various heterogeneous devices
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Mo Afrasiabi' => 'mo.afrasiabi@mimik.com' }
-  s.source           = { :git => 'https://github.com/mimikpods/MimikBeam.git', :tag => '1.1.4' }
+  s.source           = { :git => 'https://github.com/mimikpods/MimikBeam.git', :tag => '1.1.6' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
