@@ -1,0 +1,10 @@
+framework module Beam {
+  umbrella header "Beam.h"
+
+  export *
+  module * { export * }
+}
+
+module Beam.Swift {
+    header "Beam-Swift.h"
+}
