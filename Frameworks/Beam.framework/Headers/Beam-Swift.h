@@ -122,12 +122,41 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 @class GCDWebServer;
 
+/**
+  Beam service allows users to send a content link (perhaps shared with MimikDrive) to be played on a remote device (like: TV).
+*/
 SWIFT_CLASS("_TtC4Beam4Beam")
 @interface Beam : NSObject
+/**
+  Reference to the instance of GCDWebServer serving MimikBeam
+*/
 @property (nonatomic, strong) GCDWebServer * _Null_unspecified webService;
+/**
+  Beam service initializer.
+  An instance of the GCDWebServer should be passed to this constructor before start() is called.
+  The constructor will add the proper handlers based on the ‘path’ parameter.
+  \param webService reference to the GCDWebServer. If the parameter is nil constructor will create one.
+
+*/
 - (nonnull instancetype)initWithWebService:(GCDWebServer * _Nullable)webService OBJC_DESIGNATED_INITIALIZER;
+/**
+  Starts the Beam service. Use this function if the GCDWebService is not passed to the the constructor.
+  \param port Web service port number
+
+*/
 - (void)startWithPort:(NSUInteger)port;
+/**
+  Stops the Beam service. Use this function if the GCDWebService is not passed to the the constructor.
+*/
 - (void)stop;
+/**
+  Adds handlers to the GCDWebServer.
+  It is possible to have more than one Beam service running.
+  \param name Name of the Beam service
+
+  \param path Path of the Beam service (ex: “/beam/v1”)
+
+*/
 - (void)addBeamWithName:(NSString * _Nonnull)name path:(NSString * _Nonnull)path;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
